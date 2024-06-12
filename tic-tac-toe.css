@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border: 2px solid #ff6347;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #ffdab9;
+    transform: scale(1.05);
+}
+
+.cell.X {
+    background: linear-gradient(to bottom, #ff0000, #ff9999);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cell.O {
+    background: linear-gradient(to bottom, #0000ff, #9999ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.line {
+    position: absolute;
+    background-color: green;
+    z-index: 1;
+}
+
+.horizontal {
+    height: 6px;
+    left: 0;
+    right: 0;
+}
+
+.vertical {
+    width: 6px;
+    top: 0;
+    bottom: 0;
+}
+
+.diagonal-left {
+    width: calc(100% + 12px);
+    height: 6px;
+    transform: rotate(45deg);
+    top: calc(50% - 3px);
+    left: -6px;
+}
+
+.diagonal-right {
+    width: calc(100% + 12px);
+    height: 6px;
+    transform: rotate(-45deg);
+    top: calc(50% - 3px);
+    left: -6px;
+}
+
+.game-status {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #e55337;
+    transform: scale(1.05);
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}

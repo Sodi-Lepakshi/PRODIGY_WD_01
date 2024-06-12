@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic-tac-toe.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="game-board" class="game-board">
+            <div class="cell" id="cell-0" onclick="makeMove(0)"></div>
+            <div class="cell" id="cell-1" onclick="makeMove(1)"></div>
+            <div class="cell" id="cell-2" onclick="makeMove(2)"></div>
+            <div class="cell" id="cell-3" onclick="makeMove(3)"></div>
+            <div class="cell" id="cell-4" onclick="makeMove(4)"></div>
+            <div class="cell" id="cell-5" onclick="makeMove(5)"></div>
+            <div class="cell" id="cell-6" onclick="makeMove(6)"></div>
+            <div class="cell" id="cell-7" onclick="makeMove(7)"></div>
+            <div class="cell" id="cell-8" onclick="makeMove(8)"></div>
+        </div>
+        <div id="game-status" class="game-status">Player X's turn</div>
+        <button id="reset-button" onclick="resetGame()">Reset Game</button>
+        <div class="mode-buttons">
+            <button onclick="setMode('ai')">Play with AI</button>
+            <button onclick="setMode('friend')">Play with Friend</button>
+            <button onclick="setMode('online')">Play Online</button>
+        </div>
+    </div>
+    <script src="tic-tac-toe.js"></script>
+</body>
+</html>
